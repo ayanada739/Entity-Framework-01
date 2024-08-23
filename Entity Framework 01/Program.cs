@@ -12,10 +12,14 @@ namespace Entity_Framework_01
             //dbContext.employees.Add();
             //dbContext.Database.EnsureDeleted();
 
+            
             //Apply Migration To Database : EF => C# Code ==> SQL Statements
+            
             //1. Code
             //dbContext.Database.Migrate(); // Apply Ups Of All Migrations [Not Applied]
+            
             //2. Package Manager Console
+
             
         }
     }

@@ -4,7 +4,7 @@
 
 namespace Entity_Framework_01.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class Migration1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

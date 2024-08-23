@@ -25,5 +25,6 @@ namespace Entity_Framework_01.Entities
 
         public int? Age { get; set; } //Nullable<int> : Allow Null [Optional]
                                       //Int
-    }
+
+     }
 }

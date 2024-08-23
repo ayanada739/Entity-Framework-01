@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Entity_Framework_01.Migrations
 {
     [DbContext(typeof(EnterpriseDbContext))]
-    [Migration("20240823165100_Initial Create")]
-    partial class InitialCreate
+    [Migration("20240823183304_Migration 2")]
+    partial class Migration2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,6 +23,19 @@ namespace Entity_Framework_01.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
+
+            modelBuilder.Entity("Entity_Framework_01.Entities.Department", b =>
+                {
+                    b.Property<int>("DepartmentId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("DepartmentId"), 1L, 1);
+
+                    b.HasKey("DepartmentId");
+
+                    b.ToTable("departments");
+                });
 
             modelBuilder.Entity("Entity_Framework_01.Entities.Employee", b =>
                 {

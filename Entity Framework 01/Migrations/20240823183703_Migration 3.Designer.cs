@@ -4,6 +4,7 @@ using Entity_Framework_01.Contesxts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Entity_Framework_01.Migrations
 {
     [DbContext(typeof(EnterpriseDbContext))]
-    partial class EnterpriseDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240823183703_Migration 3")]
+    partial class Migration3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -32,7 +34,7 @@ namespace Entity_Framework_01.Migrations
 
                     b.HasKey("DepartmentId");
 
-                    b.ToTable("departments", (string)null);
+                    b.ToTable("departments");
                 });
 
             modelBuilder.Entity("Entity_Framework_01.Entities.Employee", b =>
@@ -54,7 +56,7 @@ namespace Entity_Framework_01.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("employees", (string)null);
+                    b.ToTable("employees");
                 });
 
             modelBuilder.Entity("Entity_Framework_01.Entities.Product", b =>
@@ -67,7 +69,7 @@ namespace Entity_Framework_01.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Products", (string)null);
+                    b.ToTable("Products");
                 });
 
             modelBuilder.Entity("Entity_Framework_01.Entities.Projects", b =>
@@ -80,7 +82,7 @@ namespace Entity_Framework_01.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("projects", (string)null);
+                    b.ToTable("projects");
                 });
 #pragma warning restore 612, 618
         }
