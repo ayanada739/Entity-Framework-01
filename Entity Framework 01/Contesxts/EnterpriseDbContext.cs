@@ -20,7 +20,7 @@ namespace Entity_Framework_01.Contesxts
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
           =>   //optionsBuilder.UseSqlServer("Data source = . ; Initial Catalog = Enterprise; Integarted Security = true") //old
-            optionsBuilder.UseSqlServer("Server = .; Batabase = Enterprise; Trusted-Connection = true");
+            optionsBuilder.UseSqlServer("Server = .; Database = Enterprise; Trusted_Connection = true");
         
 
         public DbSet<Employee> employees { get; set; }
