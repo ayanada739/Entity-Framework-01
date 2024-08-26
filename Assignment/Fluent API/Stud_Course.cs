@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assignment.Conventions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,5 +12,11 @@ namespace Assignment.Fluent_API
         public int stud_ID { get; set; }
         public int Course_ID { get; set; }
         public int Grade { get; set; }
+
+        // Navigation Property to Student
+        public Student Student { get; set; }
+
+        // Navigation Property to Course
+        public Course Course { get; set; }
     }
 }
