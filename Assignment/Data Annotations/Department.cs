@@ -18,6 +18,9 @@ namespace Assignment.Data_Annotations
         public int Ins_ID { get; set; }
 
         public DateTime HiringDate { get; set; }
+
+        // Navigation Property to Instructor
+        public Instructor Instructor { get; set; }
     }
 
 }

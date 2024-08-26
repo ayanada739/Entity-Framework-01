@@ -15,4 +15,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Entity Framework 01\Entity Framework 01.csproj" />
+  </ItemGroup>
+
 </Project>
