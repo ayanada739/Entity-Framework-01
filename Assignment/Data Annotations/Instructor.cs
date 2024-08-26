@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Assignment.Fluent_API;
 
 namespace Assignment.Data_Annotations
 {
@@ -26,6 +27,12 @@ namespace Assignment.Data_Annotations
         public decimal HourRate { get; set; }
 
         public int Dept_ID { get; set; }
+
+        // Navigation Property to Course_Inst
+        public ICollection<Course_Inst> Course_Insts { get; set; }
+
+        // Navigation Property to Department
+        public Department Department { get; set; }
     }
 
 }
