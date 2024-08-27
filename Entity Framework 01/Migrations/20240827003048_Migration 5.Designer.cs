@@ -4,6 +4,7 @@ using Entity_Framework_01.Contesxts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Entity_Framework_01.Migrations
 {
     [DbContext(typeof(EnterpriseDbContext))]
-    partial class EnterpriseDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240827003048_Migration 5")]
+    partial class Migration5
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -39,7 +41,7 @@ namespace Entity_Framework_01.Migrations
 
                     b.HasKey("DeptId");
 
-                    b.ToTable("departments", (string)null);
+                    b.ToTable("departments");
                 });
 
             modelBuilder.Entity("Entity_Framework_01.Entities.Employee", b =>
@@ -80,7 +82,7 @@ namespace Entity_Framework_01.Migrations
 
                     b.HasIndex("DepartmentDeptId");
 
-                    b.ToTable("employees", (string)null);
+                    b.ToTable("employees");
                 });
 
             modelBuilder.Entity("Entity_Framework_01.Entities.Projects", b =>
@@ -93,7 +95,7 @@ namespace Entity_Framework_01.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("projects", (string)null);
+                    b.ToTable("projects");
                 });
 
             modelBuilder.Entity("Entity_Framework_01.Entities.Employee", b =>

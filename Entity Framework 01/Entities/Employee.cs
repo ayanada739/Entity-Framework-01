@@ -65,6 +65,11 @@ namespace Entity_Framework_01.Entities
         [DataType(DataType.Password)]
 
         public string Password { get; set; }
+
+        [ForeignKey("Department")]
+        public int? DepartmentDeptId { get; set; }
+        public Department Department { get; set; }
+        //Navigation Property => One 
     } 
     #endregion
 
